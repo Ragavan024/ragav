@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ragavan.S | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Ragavan.S - Diploma Final Year Student, aspiring B.Tech Engineer from Coimbatore, Tamil Nadu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Ultra-Realistic Computer Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-room">
+      <div class="desk">
+
+        <!-- The Mac Computer -->
+        <div class="mac">
+          <div class="mac-screen">
+            <div class="mac-camera"></div>
+
+            <!-- Screen Display (Loading happens here) -->
+            <div class="mac-display" id="displayContent">
+              <div class="os-boot">
+                <div class="os-logo">
+                  <span class="os-char">R</span>
+                  <span class="os-char">a</span>
+                  <span class="os-char">g</span>
+                  <span class="os-char">a</span>
+                  <span class="os-char">v</span>
+                  <span class="os-char">a</span>
+                  <span class="os-char">n</span>
+                  <span class="os-char">.</span>
+                  <span class="os-char">S</span>
+                </div>
+                <div class="os-progress-container">
+                  <div class="os-progress-bar" id="osProgressBar"></div>
+                </div>
+                <div class="os-status" id="osStatus">Booting System...</div>
+              </div>
+            </div>
+
+            <div class="mac-logo-dot"></div>
+          </div>
+          <div class="mac-stand"></div>
+          <div class="mac-base"></div>
+        </div>
+
+        <!-- Desk Peripherals -->
+        <div class="desk-keyboard">
+          <!-- Small lines to simulate keys -->
+          <div class="keys-grid"></div>
+        </div>
+        <div class="desk-mouse"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Theme Toggle -->
+  <div class="theme-switcher" id="themeSwitcher">
+    <button class="theme-btn active" data-theme="dark" title="Dark Theme">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button class="theme-btn" data-theme="light" title="Light Theme">
+      <i class="fas fa-sun"></i>
+    </button>
+    <button class="theme-btn" data-theme="cyber" title="Cyber Theme">
+      <i class="fas fa-bolt"></i>
+    </button>
+    <button class="theme-btn" data-theme="ocean" title="Ocean Theme">
+      <i class="fas fa-water"></i>
+    </button>
+    <button class="theme-btn" data-theme="forest" title="Forest Theme">
+      <i class="fas fa-leaf"></i>
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-profile">
+      <div class="nav-profile-img">
+        <img src="profile.jpg" alt="Ragavan.S">
+      </div>
+      <span class="nav-profile-name">Ragavan<span class="accent">.</span>S</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#education" class="mob-link">Education</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for Opportunities</span>
+      </div>
+      <div class="hero-greeting">Hello, I'm</div>
+      <h1 class="hero-name"><span class="name-word">Ragavan</span><span class="name-dot accent">.</span><span
+          class="name-word">S</span></h1>
+      <div class="hero-title">
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc">
+        Diploma Final Year Student • Aspiring Engineer • Tech Enthusiast<br />
+        Building tomorrow's solutions, one line of code at a time.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Hire Me</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num">87<span>%</span></div>
+          <div class="stat-label">Diploma Score</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num">2<span>+</span></div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num">3<span>yr</span></div>
+          <div class="stat-label">Diploma</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-3d" id="hero3d">
+      <canvas id="threeCanvas"></canvas>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="section-bg-text">ABOUT</div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="avatar-wrap">
+            <div class="avatar-ring ring1"></div>
+            <div class="avatar-ring ring2"></div>
+            <div class="avatar-ring ring3"></div>
+            <div class="avatar-core">
+              <div class="avatar-letter">R</div>
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="orbit orbit1">
+              <div class="orbit-dot"><i class="fas fa-code"></i></div>
+            </div>
+            <div class="orbit orbit2">
+              <div class="orbit-dot"><i class="fas fa-microchip"></i></div>
+            </div>
+            <div class="orbit orbit3">
+              <div class="orbit-dot"><i class="fas fa-graduation-cap"></i></div>
+            </div>
+          </div>
+          <div class="about-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Coimbatore, Tamil Nadu, India</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="about-intro">
+            <p>I'm <strong>Ragavan.S</strong>, a passionate and driven Diploma Final Year student at <em>Sri Ramakrishna
+                Polytechnic College</em>, Coimbatore. I am deeply fascinated by technology, engineering, and building
+              impactful software solutions.</p>
+            <p>My journey in education began at <em>Vidya Vikasini Matric Hr Sec School</em> in Tamil Nadu, where I
+              completed my schooling from 1st to 10th standard, building a strong academic foundation.</p>
+            <p>With an overall Diploma score of <strong>87%</strong> and hands-on project experience, I am now eagerly
+              preparing to pursue my <strong>B.Tech</strong> to take my engineering journey to the next level.</p>
+          </div>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="info-label">Name</span>
+                <span class="info-value">Ragavan.S</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value">saranragavan1431@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="info-label">Degree</span>
+                <span class="info-value">Diploma (Final Year)</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-star"></i>
+              <div>
+                <span class="info-label">Percentage</span>
+                <span class="info-value">87% Overall</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <span class="info-label">Next Goal</span>
+                <span class="info-value">B.Tech (UG)</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Tamil Nadu, India</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="www.linkedin.com/in/ragavan-s-28980b362" target="_blank" class="social-link linkedin">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/ragav24.exe?igsh=bHc0aWMzcnoxZzNs" target="_blank"
+              class="social-link instagram">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="https://github.com/Ragavan024" target="_blank" class="social-link github">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:saranragavan1431@gmail.com" class="social-link gmail">
+              <i class="fas fa-envelope"></i>
+              <span>Gmail</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education" id="education">
+    <div class="section-bg-text">EDUCATION</div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Journey</span>
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="edu-timeline">
+
+        <!-- School -->
+        <div class="edu-item">
+          <div class="edu-dot">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="edu-card">
+            <div class="edu-badge">Schooling</div>
+            <h3>Vidya Vikasini Matric Hr Sec School</h3>
+            <p class="edu-location"><i class="fas fa-map-pin"></i> Tamil Nadu, India</p>
+            <p class="edu-period"><i class="fas fa-calendar-alt"></i> 1st Standard — 10th Standard</p>
+            <p class="edu-desc">Built a strong academic foundation across all core subjects in one of Tamil Nadu's
+              reputed Matriculation Higher Secondary Schools.</p>
+            <div class="edu-tag-row">
+              <span class="edu-tag">SSLC</span>
+              <span class="edu-tag">Tamil Nadu Board</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diploma -->
+        <div class="edu-item">
+          <div class="edu-dot edu-dot-active">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="edu-card edu-card-active">
+            <div class="edu-badge highlight">Current</div>
+            <h3>Sri Ramakrishna Polytechnic College</h3>
+            <p class="edu-location"><i class="fas fa-map-pin"></i> Coimbatore, Tamil Nadu, India</p>
+            <p class="edu-period"><i class="fas fa-calendar-alt"></i> Diploma — Final Year (3rd Year)</p>
+            <p class="edu-desc">Pursuing Diploma in Engineering at a prestigious polytechnic college in Coimbatore.
+              Achieved an outstanding overall score of <strong>87%</strong>.</p>
+            <div class="edu-tag-row">
+              <span class="edu-tag accent-tag">87% Overall</span>
+              <span class="edu-tag">Diploma</span>
+              <span class="edu-tag">Final Year</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- B.Tech (Upcoming) -->
+        <div class="edu-item">
+          <div class="edu-dot edu-dot-future">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="edu-card edu-card-future">
+            <div class="edu-badge future-badge">Upcoming</div>
+            <h3>B.Tech — Bachelor of Technology</h3>
+            <p class="edu-location"><i class="fas fa-map-pin"></i> Tamil Nadu, India</p>
+            <p class="edu-period"><i class="fas fa-calendar-alt"></i> After Diploma Results</p>
+            <p class="edu-desc">Aspiring to pursue B.Tech (UG) to deepen technical expertise and explore advanced
+              engineering domains after completing Diploma.</p>
+            <div class="edu-tag-row">
+              <span class="edu-tag">B.Tech</span>
+              <span class="edu-tag">Upcoming</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="section-bg-text">PROJECTS</div>
+    <canvas id="projectsCanvas"></canvas>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1: Smart Health Care -->
+        <div class="project-card" id="proj1">
+          <div class="proj-glow"></div>
+          <div class="proj-number">01</div>
+          <div class="proj-icon-wrap">
+            <div class="proj-icon-bg"></div>
+            <i class="fas fa-heartbeat proj-icon"></i>
+          </div>
+          <div class="proj-year-badge">3rd Year</div>
+          <h3 class="proj-title">Smart Health Care Companion</h3>
+          <p class="proj-desc">An intelligent health monitoring system designed to track patient vitals, provide health
+            insights, and assist caregivers. Built as the capstone project of the final year diploma program.</p>
+          <div class="proj-tech-row">
+            <span class="tech-pill">IoT</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Sensors</span>
+            <span class="tech-pill">Healthcare</span>
+          </div>
+          <div class="proj-features">
+            <div class="proj-feature"><i class="fas fa-check-circle"></i> Real-time Vitals Monitoring</div>
+            <div class="proj-feature"><i class="fas fa-check-circle"></i> Health Data Analytics</div>
+            <div class="proj-feature"><i class="fas fa-check-circle"></i> Smart Alerts & Notifications</div>
+          </div>
+          <div class="proj-footer">
+            <span class="proj-status status-done"><i class="fas fa-circle"></i> Completed</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Online Attendance -->
+        <div class="project-card" id="proj2">
+          <div class="proj-glow proj-glow2"></div>
+          <div class="proj-number">02</div>
+          <div class="proj-icon-wrap">
+            <div class="proj-icon-bg proj-icon-bg2"></div>
+            <i class="fas fa-clipboard-check proj-icon proj-icon2"></i>
+          </div>
+          <div class="proj-year-badge proj-year-badge2">2nd Year</div>
+          <h3 class="proj-title">Online Attendance System</h3>
+          <p class="proj-desc">A digital attendance management platform built to automate and streamline student
+            attendance tracking for educational institutions, replacing manual paper-based systems.</p>
+          <div class="proj-tech-row">
+            <span class="tech-pill">Web Development</span>
+            <span class="tech-pill">Database</span>
+            <span class="tech-pill">Authentication</span>
+          </div>
+          <div class="proj-features">
+            <div class="proj-feature"><i class="fas fa-check-circle"></i> Digital Attendance Tracking</div>
+            <div class="proj-feature"><i class="fas fa-check-circle"></i> Teacher & Student Portal</div>
+            <div class="proj-feature"><i class="fas fa-check-circle"></i> Reports & Analytics</div>
+          </div>
+          <div class="proj-footer">
+            <span class="proj-status status-done2"><i class="fas fa-circle"></i> Completed</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="section-bg-text">SKILLS</div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-code"></i>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info"><span>Python</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info"><span>HTML / CSS</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info"><span>JavaScript</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info"><span>C / C++</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="65"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-microchip"></i>
+            <h3>Technical</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info"><span>IoT Systems</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="75" style="--accent-clr: var(--clr-2)"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info"><span>Database (SQL)</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="72" style="--accent-clr: var(--clr-2)"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info"><span>Embedded Systems</span><span class="skill-pct">68%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="68" style="--accent-clr: var(--clr-2)"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info"><span>Circuit Design</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="65" style="--accent-clr: var(--clr-2)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-brain"></i>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="soft-skills-grid">
+            <div class="soft-skill"><i class="fas fa-users"></i>Team Work</div>
+            <div class="soft-skill"><i class="fas fa-lightbulb"></i>Problem Solving</div>
+            <div class="soft-skill"><i class="fas fa-comments"></i>Communication</div>
+            <div class="soft-skill"><i class="fas fa-clock"></i>Time Management</div>
+            <div class="soft-skill"><i class="fas fa-sync"></i>Adaptability</div>
+            <div class="soft-skill"><i class="fas fa-chart-line"></i>Quick Learner</div>
+          </div>
+        </div>
+      </div>
+      <!-- 3D Skill Sphere Visualization -->
+      <div class="skill-sphere-wrap">
+        <canvas id="skillSphere"></canvas>
+        <div class="sphere-label">Tech Universe</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="section-bg-text">CONTACT</div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">I'm always open to discussing new opportunities, collaborations, or just having a
+            great tech conversation. Feel free to reach out!</p>
+          <div class="contact-cards">
+            <a href="mailto:saranragavan1431@gmail.com" class="contact-card">
+              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="contact-card-label">Email</div>
+                <div class="contact-card-value">saranragavan1431@gmail.com</div>
+              </div>
+            </a>
+            <a href="www.linkedin.com/in/ragavan-s-28980b362" target="_blank" class="contact-card">
+              <div class="contact-card-icon linkedin-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <div class="contact-card-label">LinkedIn</div>
+                <div class="contact-card-value">ragavan-s-28980b362</div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/ragav24.exe?igsh=bHc0aWMzcnoxZzNs" target="_blank" class="contact-card">
+              <div class="contact-card-icon insta-icon"><i class="fab fa-instagram"></i></div>
+              <div>
+                <div class="contact-card-label">Instagram</div>
+                <div class="contact-card-value">@ragav24.exe</div>
+              </div>
+            </a>
+            <a href="https://github.com/Ragavan024" target="_blank" class="contact-card">
+              <div class="contact-card-icon github-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <div class="contact-card-label">GitHub</div>
+                <div class="contact-card-value">Ragavan024</div>
+              </div>
+            </a>
+            <div class="contact-card">
+              <div class="contact-card-icon loc-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="contact-card-label">Location</div>
+                <div class="contact-card-value">Coimbatore, Tamil Nadu, India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required />
+            <span class="input-highlight"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <span class="input-highlight"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What's this about?" />
+            <span class="input-highlight"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
+            <span class="input-highlight"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-profile">
+        <img src="profile.jpg" alt="Ragavan.S" class="footer-avatar">
+        <div class="footer-logo">Ragavan<span class="accent">.</span>S</div>
+      </div>
+      <p class="footer-tagline">Engineering the Future, One Project at a Time.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Ragavan024" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="www.linkedin.com/in/ragavan-s-28980b362" target="_blank" title="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/ragav24.exe?igsh=bHc0aWMzcnoxZzNs" target="_blank" title="Instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="mailto:saranragavan1431@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">© 2025 Ragavan.S — All Rights Reserved. Made with <i class="fas fa-heart accent"></i> in
+        Tamil Nadu, India</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
